@@ -2,7 +2,7 @@ class ActivitiesController < ApplicationController
 
     def index
         activities = Activity.all
-        render json: activities
+        render json: activities, include: [:category]
     end
     
     def create
@@ -11,6 +11,7 @@ class ActivitiesController < ApplicationController
             render json: activity, status: :acepted
        else
             render json: {errors: activity.errors.full_messages}, status: :unprocessible_entity
+       end
     end
 
     def show
