@@ -19,6 +19,14 @@ class ActivitiesController < ApplicationController
         render json: activity 
     end
 
+    def update
+
+    end
+
+    def destroy
+
+    end
+
 
     private
 
