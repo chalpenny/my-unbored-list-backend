@@ -32,7 +32,6 @@ class ActivitiesController < ApplicationController
 
     def activity_params
         params.require(:activity).permit(:name, :url, :notes, status, :category_id) 
-        params.permit()
     end
 
 end

@@ -24,6 +24,8 @@ class CategoriesController < ApplicationController
     end
 
     def destroy
+        category = Category.find_by(id: params[:id])
+        category.destroy
 
     end
     
@@ -32,7 +34,6 @@ class CategoriesController < ApplicationController
 
     def category_params
         params.require(:category).permit(:name) 
-        params.permit()
     end
 
 end

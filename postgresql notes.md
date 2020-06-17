@@ -25,4 +25,21 @@
        better practice to edit the setting in postgresql.conf than to rely on a command-line switch to set a parameter.
 
 
-       Be sure to un-comment "port 5432" in database.yml file.
+
+
+    Be sure to un-comment "port 5432" in database.yml file.
+
+
+    To restart after shutting down: 
+        error with postgresql datababse : Is the server running locally and accepting connections on Unix domain socket “/var/run/postgresql/.s.PGSQL.5432”?
+    
+    Check Postgres Service status from Terminal
+
+        sudo service postgresql status
+        Enable Postgres Service, If not started
+
+        sudo service postgresql start
+        OR
+
+        sudo service postgresql restart
+        Now your command should work, If Postgres Service is successfully started.
