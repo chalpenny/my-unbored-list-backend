@@ -20,7 +20,8 @@ class CategoriesController < ApplicationController
     end
 
     def update
-
+        category = Category.find_by(id: params[:id])
+        render json: category
     end
 
     def destroy
