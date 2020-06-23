@@ -6,9 +6,9 @@ class ActivitiesController < ApplicationController
     end
     
     def create
-       activity = Activity.new(activity_params)
+        activity = Activity.new(activity_params)
        if activity.save
-            render json: activity, status: :acepted
+            render json: activity, status: :accepted
        else
             render json: {errors: activity.errors.full_messages}, status: :unprocessible_entity
        end
@@ -31,7 +31,7 @@ class ActivitiesController < ApplicationController
     private
 
     def activity_params
-        params.require(:activity).permit(:name, :url, :notes, status, :category_id) 
+        params.require(:activity).permit(:name, :url, :notes, :category_id) 
     end
 
 end
