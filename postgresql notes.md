@@ -35,11 +35,11 @@
     
     Check Postgres Service status from Terminal
 
-        sudo service postgresql status
+        $ sudo service postgresql status
         Enable Postgres Service, If not started
 
-        sudo service postgresql start
+        $ sudo service postgresql start
         OR
 
-        sudo service postgresql restart
+        $ sudo service postgresql restart
         Now your command should work, If Postgres Service is successfully started.
