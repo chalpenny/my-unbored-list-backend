@@ -24,7 +24,9 @@ class ActivitiesController < ApplicationController
     end
 
     def destroy
-
+        activity = Activity.find_by(id: params[:id])
+        activity.destroy
+        render json: activity
     end
 
 
